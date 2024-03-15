@@ -4,7 +4,7 @@ package person;
 import values.CustomerRole;
 
 public class Customer {
-    CustomerRole role;
+    private CustomerRole role;
     String id;
     String fullname;
 
