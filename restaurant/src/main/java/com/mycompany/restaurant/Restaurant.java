@@ -37,5 +37,7 @@ public class Restaurant {
             case 2 -> System.out.println("Almuerzo = " + menu.getDishesPerType(DishType.LUNCH));
             default -> System.out.println("No existe el menu");
         }
+        
+        System.out.println(student.buyFood());
     }
 }

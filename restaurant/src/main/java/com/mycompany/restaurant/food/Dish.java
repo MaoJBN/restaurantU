@@ -29,5 +29,13 @@ public class Dish {
     public String getIngredients() {
         return ingredients;
     }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public int getQuanty() {
+        return quanty;
+    }
     
 }

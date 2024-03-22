@@ -23,8 +23,7 @@ public class Menu {
         
         for(Dish dish:dishlist){
             if(dish.getType()==dishType){
-                foundDishes.add(dish.getNameDish() + "\n" + "Ingredientes = " );
-                foundDishes.add(dish.getIngredients() +"\n");
+                foundDishes.add(dish.getNameDish() + "\n" + "Ingredientes = " + dish.getIngredients() + "\n"  );
             }
         }
         

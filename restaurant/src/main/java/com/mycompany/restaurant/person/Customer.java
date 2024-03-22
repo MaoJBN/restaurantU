@@ -1,6 +1,8 @@
 
 package com.mycompany.restaurant.person;
 
+import com.mycompany.restaurant.food.Dish;
+import com.mycompany.restaurant.food.Menu;
 import com.mycompany.restaurant.values.CustomerRole;
 
 public class Customer {
@@ -18,10 +20,21 @@ public class Customer {
     
     }
     
-    void buyFood(){
-    
+    public float buyFood(){
+        float finalprice;
+        if(this.role == CustomerRole.TEACHER || this.role == CustomerRole.ADMINISTRATIVE ){
+            finalprice = 7000;
+            return finalprice;
+        }
+        else{
+            finalprice = (float) Math.ceil(7000*0.3428);
+        }
+        
+        return finalprice;
     }
-    
+    void lookQuanty(){
+        
+    }
     void cancelBuy(){
     
     }
@@ -32,5 +45,5 @@ public class Customer {
             return;
         }
              System.out.println("one moment my friend");
-    }
+    } 
 }
