@@ -1,6 +1,7 @@
 
 package com.mycompany.restaurant.food;
 
+import com.mycompany.restaurant.values.DishType;
 import java.util.ArrayList;
 
 public class Menu {
@@ -16,5 +17,19 @@ public class Menu {
     
     public void addDish(Dish dish){
         this.dishlist.add(dish);
+    }
+     public ArrayList<String> getDishesPerType(DishType dishType){
+        ArrayList<String> foundDishes=new ArrayList<>();
+        
+        for(Dish dish:dishlist){
+            if(dish.getType()==dishType){
+                foundDishes.add(dish.getNameDish() + "\n" + "Ingredientes = " );
+                foundDishes.add(dish.getIngredients() +"\n");
+            }
+        }
+        
+        return foundDishes;
+        
+        
     }
 }
